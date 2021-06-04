@@ -11,7 +11,7 @@ class Expense extends Model
     use SoftDeletes;
     use HasFactory;
     protected $table = 'expenses';
-    //relation one a much (inve)
+    //relation one to much (inve)
     public function expenseReport(){
         return $this->belongsTo('App\Models\ExpenseReport','expenses_report_id', 'id');
     }
